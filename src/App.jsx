@@ -88,14 +88,14 @@ function App() {
   return (
     <>
     <div className='w-100 bg-dark d-flex justify-content-center align-items-center'style={{height:'100vh'}}>
-      <div className='bg-light w-40 shadow rounded p-4'>
-      <h4>Simple Interest Calculator</h4>
-      <div className='d-flex justify-content-center p-5 border shadow mt-3 p-2' style={{backgroundColor:'yellow'}}>
+      <div className= 'w-40 shadow rounded p-4' style={{backgroundColor:'rgb(210, 210, 210)'}}>
+      <h3>Simple Interest Calculator</h3>
+      <div className='d-flex justify-content-center p-5 border shadow mt-4 p-3' style={{backgroundColor:'rgb(235, 125, 117)'}}>
       ₹{Result}
       </div>
       <form onSubmit={(e)=>{submitted(e)}}>
         <div className='mt=2 p-2'>
-         <TextField id="outlined-basic"value={pamount} name='pamount' onChange={(e)=>{validInput(e)}} style={{width:'100%'}}label="₹ Principle Amount" variant="outlined"/>
+         <TextField id="outlined-basic"value={pamount} name='pamount' onChange={(e)=>{validInput(e)}} style={{width:'100%',backgroundColor:''}}label="₹ Principle Amount" variant="outlined"/>
          {
           !validpamount &&
           <div className='text-danger'>
@@ -122,8 +122,8 @@ function App() {
          }
         </div>
         <Stack spacing={2} direction="row">
-          <Button variant="contained" disabled={validpamount&&validrate&&validtime?false:true}type="submit" className='bg-dark' style={{height:'50px',width:'50%'}}>Submit</Button>
-          <Button variant="contained"  className='bg-info'onClick={resetForm} style={{height:'50px',width:'50%'}}>Reset</Button>
+          <Button variant="contained" disabled={validpamount&&validrate&&validtime?false:true}type="submit" className='bg-success' style={{height:'50px',width:'50%'}}>Submit</Button>
+          <Button variant="contained"  className='bg-'onClick={resetForm} style={{height:'50px',width:'50%'}}>Reset</Button>
         </Stack>
         
 
